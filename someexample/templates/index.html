@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block sefa %}
+<p>This page is index</p>
+{% endblock sefa %}
+{% block title %}Index{% endblock title %}
+
+{% if answer=="yes" %}
+    <p>Answer is yes</p>
+
+{% elif=="yess" %}
+    <p>Answer is yess</p>
+{% else %}
+     <p>Answer is not yes</p>
+
+{% endif %}
+
+<ul>
+    {% for number in answer %}
+        <li>{{number}}</li>
+    {% endfor %}
+</ul>
+
+{% comment %} @app.route("/article/<string:id>")
+def detail(id):
+    return "article id" + id {% endcomment %}
+
+#pip install flask-mysqldb
+#pip install Flask-WTF
+#pip install passlib
